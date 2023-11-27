@@ -1,42 +1,36 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema ({ //memanggil module dan membuat schema
-      nama_tempat: {
+      nama_tempat_pkl: {
         type: String,
-        required:[true, 'silahkan isikan nama Tempat PKL'],
+        required:[true, 'silahkan isikan nama Tempat'],
         unique: true,
         allowNull: false,
       },
-      alamat_tempat: {
+      alamat_tempat_pkl: {
         type: String,
-        required:[true, 'silahkan isikan alamat tempat'],
+        required:[true, 'silahkan isikan alamat'],
         unique: true,
         allowNull: false,
       },
-      nama_pegawai: {
+      nama_pekerja: {
         type: String,
-        required:[true, 'silahkan isikan nama pegawai'],
+        required:[true, 'silahkan isikan pegawai'],
         unique: true,
         allowNull: false,
       },
-      jabatan_pegawai: {
+      jabatan: {
         type: String,
-        required:[true, 'silahkan isikan jabatan pegawai'],
-        unique: true,
-        allowNull: false,
-      },
-      nama_pemilik: {
-        type: String,
-        required:[true, 'silahkan isikan nama pemilik'],
+        required:[true, 'silahkan isikan jabatan'],
         unique: true,
         allowNull: false,
       },
       nama_siswa_pkl: {
         type: String,
-        required:[true, 'silahkan isikan nama siswa pkl'],
+        required:[true, 'isikan nama siswa pkl'],
         unique: true,
         allowNull: true,
       },
     });   
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('User', UserSchema);
